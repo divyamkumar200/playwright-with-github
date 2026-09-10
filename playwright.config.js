@@ -14,6 +14,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './Tests',
+ // globalSetup: require.resolve('./global-setup'),
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -29,7 +30,16 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
+    
+  
+  //storageState: 'playwright/.auth/user.json',
+  
+
+
+
+
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+    // @ts-ignore
     trace: 'on-first-retry',
   },
 

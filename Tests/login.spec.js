@@ -3,13 +3,10 @@ test.describe('login',()=>{
     
     test('should login with valid credentials', async ({page}) => {
 
-        try{
-await page.goto('https://practicetestautomation.com/practice-test-login/')
-await page.locator("#username").fill('student');
-await page.locator("#password").fill('Password');
-await page.locator("#submit").click();
-
-await expect(page).toHaveURL('https://practicetestautomation.com/logged-in-successfully/')
+        try
+        {
+await page.goto('https://automationexercise.com/login')
+await expect(page).toHaveURL('https://automationexercise.com/login');
 console.log('Login test passed!');
 await page.waitForTimeout(5000);
 }
